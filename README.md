@@ -30,6 +30,7 @@ def clr(pwd):
     parm_pat = hou.node(pwd.path()+"/blast1").parm("pat")
     parm_pat.set(0)
 ```
-    and this parameter callbacks for buttons:
-    1) kwargs["node"].hdaModule().s(kwargs["node"])
-    2) kwargs["node"].hdaModule().clr(kwargs["node"])
+
+and this parameter callbacks for buttons:
+1) kwargs["node"].hdaModule().s(kwargs["node"])
+2) kwargs["node"].hdaModule().clr(kwargs["node"])
