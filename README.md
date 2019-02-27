@@ -4,7 +4,7 @@ Houdini digital assets
 made in viewport, creates pattern based on given attribute like particle "id" and paste group selection pattern to blast node (i.e. 
 @id="1 2 3"). Also it can use points from second input to read it's "id" and remove identical particles from first input.
 It uses hda PythonModule:
-**********************
+```
 import toolutils
 def s(pwd):
     sel = toolutils.sceneViewer().selectGeometry()
@@ -29,7 +29,7 @@ def clr(pwd):
     parm.set("@`chs('../aname')`=\"\"")
     parm_pat = hou.node(pwd.path()+"/blast1").parm("pat")
     parm_pat.set(0)
-************************
+```
 and this parameter callbacks for buttons:
 1) kwargs["node"].hdaModule().s(kwargs["node"])
 2) kwargs["node"].hdaModule().clr(kwargs["node"])
